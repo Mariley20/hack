@@ -12,8 +12,8 @@ import Parts from './Parts';
 import Camera from './Camera';
 import Abstract from './Abstract';
 import AddPhoto from './AddPhoto';
-// import {Resume} from './Resume';
-const App = ({chatComent, wordsIdentify, selected, next, parts}) => {
+import Map from './Map';
+const App = ({chatComent, wordsIdentify, selected, next, parts, properties, activeProperty, targetPlace,isRouting, info}) => {
 return (
      <div className="container-fluid">
         <HashRouter>
@@ -22,7 +22,8 @@ return (
                     <Route path="/showParts"  render={() => <Parts  />}/>
                      <Route path="/addPhoto"  render={() => <AddPhoto />}/>
                     <Route path="/camera"  render={() => <Camera  />}/>
-                    <Route path = "/abstract" render = { () => <Abstract parts={parts}/>} />
+                    <Route path="/map"  render={() => <Map  />}/>
+                    <Route path = "/abstract" render = { () => <Abstract parts={parts} info={info}/>} />
                     <Route path='/hack' render={() => <Redirect to="/chatReport"/>}/>
                     <Route exact path="/" render={() => <ChatReport chatComent={chatComent} next={next}/>}/>
                     {/* <Route path="/resume"  render={() => <Resume biografy={biografy} selected={selected} />}/> */}
@@ -31,6 +32,6 @@ return (
     </div>
 )
 }
-const mapToProps = ({chatComent,wordsIdentify, selected, next, parts}) => ({chatComent, wordsIdentify, selected, next, parts});
+const mapToProps = ({chatComent,wordsIdentify, selected, next, parts, properties, activeProperty,targetPlace,isRouting,info}) => ({chatComent, wordsIdentify, selected, next, parts, properties, activeProperty, targetPlace,isRouting,info});
 
 export default connect(mapToProps)(App);

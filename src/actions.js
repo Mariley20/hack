@@ -34,3 +34,21 @@ export const saveParts = (text) => {
     });
     console.log('parts', store.getState().parts);
 }
+
+/**
+ * Mapa
+ */
+export const setActiveProperty= (property) =>{
+    store.setState({
+        activeProperty : property
+    })
+		
+	}
+
+export const setTarget = (targetPlace) => {
+		store.setState({targetPlace  :targetPlace})
+	}
+
+export const setIsRouting  = ()  => {
+		store.setState({isRouting : true})
+	}

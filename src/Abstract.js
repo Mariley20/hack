@@ -72,7 +72,7 @@ class Abstract extends React.Component{
                     <b>Modelo del Vehículo:</b><br/><span>Volkswagen</span><br/>
                     <b>Ubicación del suceso:</b><br/><span>{this.props.info.location}</span><br/>
                     {/* <b>Tipo de daño:</b><br/><span>{this.showTypeDamage()}</span><br/> */}
-                    {/* <b>Descripción del suceso:</b><br/><span>{this.props.info.description}</span><br/> */}
+                    <b>Descripción del suceso:</b><br/><span>{this.props.info.description}</span><br/>
                     {
                         this.props.parts.length
                         ?

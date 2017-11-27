@@ -40,7 +40,7 @@ const HTMLprint = ({chatComent, next}) => {
                 })
             }
             {
-            next  && <Redirect to = "/showParts" />
+            next  && <Redirect to = "/map" />
          }
         </div>
     )
