@@ -1,6 +1,6 @@
 import createStore from "redux-zero";
 const initialState = {
-    data: data,
+    chatReport: chatReport,
     selected: 0,
 };
 
