@@ -8,6 +8,7 @@ export const chat = (text) => {
     store.setState({
         chatComent: clone
     });
+    
     const cloneWords = [...store.getState().wordsIdentify];
         for(let i = 0; i < cloneWords.length ; i++){
            let  n = text.indexOf(cloneWords[i]);

@@ -81,7 +81,7 @@ class Abstract extends React.Component{
                         <div></div>
                     }
                     <div className='row'>
-                        <div className='col-xs-12'><NavLink className='btn btn-block' to={'/results'}>Enviar</NavLink></div><br/><br/>
+                        <div className='col-xs-12'><NavLink className='btn btn-block' to={'/chatReport'}>Enviar</NavLink></div><br/><br/>
                         <div className='col-xs-12'><NavLink className='btn btn-block' to={'/map'}>Cancelar</NavLink></div>
                     </div>
                 </div>

@@ -59,3 +59,17 @@
 .btn:hover {
     color: white;
 }
+
+.container {
+    padding-left: 0;
+}
+
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.container span,
+.container b {
+    padding-left: 7px;
+}
