@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { NavLink } from "react-router-dom";
+import {saveParts} from './actions';
 
 class Parts extends Component {
   constructor(props) {
@@ -55,33 +56,34 @@ class Parts extends Component {
   }
   saveInfo(){
     if(this.state.fr !=='')
-      this.props.info.damagedParts.push("Frente")
+    saveParts('Frente')
+      // this.props.info.damagedParts.push("Frente")
     if(this.state.fwl !=='')
-      this.props.info.damagedParts.push("Ala izquierda")
+      saveParts("Ala izquierda")
     if(this.state.fwr !=='')
-      this.props.info.damagedParts.push("Ala derecha")
+      saveParts("Ala derecha")
     if(this.state.bonnet !=='')
-      this.props.info.damagedParts.push("Capot")
+      saveParts("Capot")
     if(this.state.ws !=='')
-    this.props.info.damagedParts.push("Parabrisas")
+    saveParts("Parabrisas")
     if(this.state.fdl !=='')
-    this.props.info.damagedParts.push("Puerta delantera izquierda")
+    saveParts("Puerta delantera izquierda")
     if(this.state.fdr !=='')
-    this.props.info.damagedParts.push("Puerta delantera derecha")
+    saveParts("Puerta delantera derecha")
     if(this.state.roof !=='')
-    this.props.info.damagedParts.push("Techo")
+    saveParts("Techo")
     if(this.state.bdl !=='')
-    this.props.info.damagedParts.push("Puerta trasera izquierda")
+    saveParts("Puerta trasera izquierda")
     if(this.state.bdr !=='')
-    this.props.info.damagedParts.push("Puerta trasera derecha")
+    saveParts("Puerta trasera derecha")
     if(this.state.rw !=='')
-    this.props.info.damagedParts.push("Ventana trasera")
+    saveParts("Ventana trasera")
     if(this.state.bumper !=='')
-    this.props.info.damagedParts.push("Maletero")
+    saveParts("Maletero")
     if(this.state.tl !=='')
-    this.props.info.damagedParts.push("Cola izquierda")
+    saveParts("Cola izquierda")
     if(this.state.tr !=='')
-    this.props.info.damagedParts.push("Cola derecha")
+    saveParts("Cola derecha")
     
   }
   render() {

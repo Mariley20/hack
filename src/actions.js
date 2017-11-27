@@ -26,3 +26,11 @@ export const chat = (text) => {
         // let arrayText = text.split(" ");
 
 }
+export const saveParts = (text) => {
+    let clone = [...store.getState().parts];
+    clone.push(text);
+    store.setState({
+        parts:clone
+    });
+    console.log('parts', store.getState().parts);
+}

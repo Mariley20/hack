@@ -9,11 +9,11 @@ import {
     BrowserRouter} from 'react-router-dom';
 import {ChatReport} from './ChatReport';
 import Parts from './Parts';
-// import {Habilities} from './Habilities';
-// import {Contact} from './Contact';
+import Camera from './Camera';
+import Abstract from './Abstract';
 import AddPhoto from './AddPhoto';
 // import {Resume} from './Resume';
-const App = ({chatComent, wordsIdentify, selected, next}) => {
+const App = ({chatComent, wordsIdentify, selected, next, parts}) => {
 return (
      <div className="container-fluid">
         <HashRouter>
@@ -21,8 +21,8 @@ return (
                     <Route path="/chatReport" render={() => <ChatReport chatComent={chatComent} next={next}/>}/>
                     <Route path="/showParts"  render={() => <Parts  />}/>
                      <Route path="/addPhoto"  render={() => <AddPhoto />}/>
-                   {/* <Route path="/habilities"  render={() => <Habilities NavBar={NavBar} Information={Information} />}/>
-                    <Route path = "/contact" render = { () => <Contact NavBar={NavBar} Information={Information}/>} /> */}
+                    <Route path="/camera"  render={() => <Camera  />}/>
+                    <Route path = "/abstract" render = { () => <Abstract parts={parts}/>} />
                     <Route path='/hack' render={() => <Redirect to="/chatReport"/>}/>
                     <Route exact path="/" render={() => <ChatReport chatComent={chatComent} next={next}/>}/>
                     {/* <Route path="/resume"  render={() => <Resume biografy={biografy} selected={selected} />}/> */}
@@ -31,6 +31,6 @@ return (
     </div>
 )
 }
-const mapToProps = ({chatComent,wordsIdentify, selected, next}) => ({chatComent, wordsIdentify, selected, next});
+const mapToProps = ({chatComent,wordsIdentify, selected, next, parts}) => ({chatComent, wordsIdentify, selected, next, parts});
 
 export default connect(mapToProps)(App);

@@ -11,7 +11,8 @@ const initialState = {
     chatComent: chatComent,
     wordsIdentify: wordsIdentify,
     selected: 0,
-    next: false
+    next: false,
+    parts: []
 };
 
 const store = createStore(initialState);
