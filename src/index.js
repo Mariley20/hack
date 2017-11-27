@@ -1,8 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import { Provider } from 'redux-zero/react';
+import {
+    HashRouter,
+    Route,
+    Switch
+} from 'react-router-dom';
+import store from "./store";
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
-
-ReactDOM.render(<App />, document.getElementById('root'));
+// import './styles/App.css';
+const Index = () => (
+    <Provider store={store}>
+        <App />
+    </Provider>
+);
+ReactDOM.render(<Index />, document.getElementById('root'));
 registerServiceWorker();
