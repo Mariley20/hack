@@ -16,7 +16,7 @@ import AddPhoto from './AddPhoto';
 import Map from './Map';
 const App = ({chatComent, wordsIdentify, selected, next, parts, properties, activeProperty, targetPlace,isRouting, info}) => {
 return (
-     <div className="container-fluid">
+     <div className="container">
         <HashRouter>
             <Switch>
                     <Route path="/chatReport" render={() => <ChatReport chatComent={chatComent} next={next}/>}/>
@@ -27,7 +27,7 @@ return (
                     <Route path="/map"  render={() => <Map  />}/>
                     <Route path = "/abstract" render = { () => <Abstract parts={parts} info={info}/>} />
                     <Route path='/hack' render={() => <Redirect to="/chatReport"/>}/>
-                    <Route exact path="/" render={() => <ChatReport chatComent={chatComent} next={next}/>}/>
+                    <Route exact path="/" render={() => <Login />}/>
                     {/* <Route path="/resume"  render={() => <Resume biografy={biografy} selected={selected} />}/> */}
             </Switch>
         </HashRouter>

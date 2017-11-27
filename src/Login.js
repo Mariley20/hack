@@ -1,28 +1,26 @@
 import React, { Component } from 'react';
-import logo from './images/logo.png'
 import { NavLink } from 'react-router-dom';
-import './App.css';
+// import './Login.css';
+import {signIn} from './actions';
 
-const Init_page = () => {
+export const Login = () => {
     return (
-        <div className='view-container sessions new'> 
-            <main>
-                <header>
-                    <div className='logo'></div>
-                </header>
-                <form id='sign_in_form'>
-                    <div className='field'>
-                        <input type="email" id='user_email' placeholder="Email" required />
-                    </div>
-                    <div className='field'>
-                        <input type="password" id='user_password' placeholder="Password"  required />
-                    </div>
-                    <NavLink to={"/boards"}><button type='submit'>Sign in</button></NavLink>
-                    <div className='second_view'>
-                        <NavLink to={"/signup"}>Create new account</NavLink>
-                    </div>
-                </form>
-            </main> 
+        <form
+            onSubmit = {
+       e => {
+          e.preventDefault();
+          signIn ( this.emailInputRef.value,  this.passwordInputRef.value)
+       }
+    }>
+        <div class="form-group">
+            <label for="email">Email address:</label>
+            <input type="email" class="form-control" id="email" ref = { e => this.emailInputRef = e} />
+         </div>
+         <div class="form-group">
+             <label for="pwd">Password:</label>
+            <input type="password" class="form-control" id="pwd" ref = { e => this.passwordInputRef = e} />
         </div>
+        <button type="submit" class="btn btn-default"> <NavLink to='/chatReport'> Submit </NavLink></button>
+        </form>
     )
 }

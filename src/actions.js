@@ -1,14 +1,29 @@
 import store from "./store";
+
+export const signIn = (email, password) => {
+    let clone = [...store.getState().info]
+    clone.user = 'Jhon Doe';
+    clone.email= email;
+
+    store.setState({
+        info: clone
+    })
+}
+
 export const chat = (text) => {
     // let msg  = ;
     let clone = [...store.getState().chatComent];
     clone.push({
         msg: text
     })
+    let cloneInfo = [...store.getState().info];
+    cloneInfo.description = text;
+
     store.setState({
-        chatComent: clone
+        chatComent: clone,
+        info : cloneInfo
     });
-    
+
     const cloneWords = [...store.getState().wordsIdentify];
         for(let i = 0; i < cloneWords.length ; i++){
            let  n = text.indexOf(cloneWords[i]);
