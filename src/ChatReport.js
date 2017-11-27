@@ -21,7 +21,7 @@ export const ChatReport = ({chatComent, next}) => {
                     placeholder="comment" ref = { e => this.commentInputRef = e} />
 			</div>
         </div>     
-       <button type = "submit" >comment</button>
+       <button className='btn btn-default' type = "submit" >comment</button>
     </form>
     </div>
     )

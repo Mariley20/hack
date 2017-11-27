@@ -53,7 +53,7 @@
     color: white;
     font-size: 25px;
     font-weight: bold;
-    background-color: #4BCAA4;
+    background-color: #ff6e00;
 }
 
 .btn:hover {
@@ -72,4 +72,8 @@
 .container span,
 .container b {
     padding-left: 7px;
+}
+
+a {
+    color: white;
 }
